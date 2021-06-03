@@ -1,11 +1,11 @@
 import { Route, Switch } from 'react-router';
-import NavBar from './Views/NavBar';
+import Navigation from './Views/Navigation';
 import LandingPage from './Views/LandingPage'
 
 function App() {
   return (
     <>
-    <NavBar />
+    <Navigation />
     <Switch>
       <Route path='/' component={LandingPage} />
     </Switch>
