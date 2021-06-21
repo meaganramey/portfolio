@@ -7,11 +7,13 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Button from "react-bootstrap/esm/Button";
 
 import "../Assets/Styling/LandingPage.css";
+import useStore from "../Store/Store";
 
 const LandingPage = (props) => {
+  const updateBackground = useStore((state) => state.updateBackground);
   return (
     <>
-      <Container className="mt-5">
+      <Container className="mt-5 mb-5">
         <Row className="justify-content-center hello_row">
           <Jumbotron className="p-4 text-white hello_jumbo">
             <h1 className="intro-title mb-4">Meagan Ramey</h1>
@@ -37,8 +39,14 @@ const LandingPage = (props) => {
               </strong>
             </h4>
             <p className="pt-3">
-              <Button as={Link} to='/about_meagan' variant='secondary' block>
-                  View my work
+              <Button
+                as={Link}
+                to="/code_samples"
+                variant="secondary"
+                block
+                onClick={(e) => updateBackground("code_samples")}
+              >
+                View my work
               </Button>
             </p>
           </Jumbotron>

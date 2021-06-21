@@ -5,11 +5,14 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { Link } from "react-router-dom";
 
+import useStore from "../Store/Store";
+
 const Footer = (props) => {
+  const updateBackground = useStore((state) => state.updateBackground);
   return (
     <>
       <Navbar fixed="bottom" bg="dark" variant="dark" expand="lg">
-        <Container style={{ flexDirection: "column"}}>
+        <Container style={{ flexDirection: "column" }}>
           <Row>
             <Nav.Link href="tel:+16082086758">
               <svg
@@ -102,16 +105,36 @@ const Footer = (props) => {
             </Nav.Link>
           </Row>
           <Row>
-            <Nav.Link as={Link} to="/" className="text-white">
+            <Nav.Link
+              as={Link}
+              to="/"
+              className="text-white"
+              onClick={(e) => updateBackground("home")}
+            >
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/about_meagan" className="text-white">
+            <Nav.Link
+              as={Link}
+              to="/about_meagan"
+              className="text-white"
+              onClick={(e) => updateBackground("aboutMe")}
+            >
               About Me
             </Nav.Link>
-            <Nav.Link as={Link} to="/resume" className="text-white">
+            <Nav.Link
+              as={Link}
+              to="/resume"
+              className="text-white"
+              onClick={(e) => updateBackground("resume")}
+            >
               Resume
             </Nav.Link>
-            <Nav.Link as={Link} to="/resume" className="text-white">
+            <Nav.Link
+              as={Link}
+              to="/code_samples"
+              className="text-white"
+              onClick={(e) => updateBackground("code_samples")}
+            >
               Code Samples
             </Nav.Link>
           </Row>

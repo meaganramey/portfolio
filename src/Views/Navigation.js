@@ -31,10 +31,9 @@ const Navigation = (props) => {
               onClick={() => {
                 setTimeout(() => {
                   setExpanded(false);
-                }, 150)
-                updateBackground("home")
-              }
-              }
+                }, 150);
+                updateBackground("home");
+              }}
             >
               Home
             </Nav.Link>
@@ -44,10 +43,9 @@ const Navigation = (props) => {
               onClick={() => {
                 setTimeout(() => {
                   setExpanded(false);
-                }, 150)
-                updateBackground("aboutMe")
-              }
-              }
+                }, 150);
+                updateBackground("aboutMe");
+              }}
             >
               About Me
             </Nav.Link>
@@ -57,10 +55,9 @@ const Navigation = (props) => {
               onClick={() => {
                 setTimeout(() => {
                   setExpanded(false);
-                }, 150)
-                updateBackground("resume")
-              }
-              }
+                }, 150);
+                updateBackground("resume");
+              }}
             >
               Resume
             </Nav.Link>
@@ -101,14 +98,14 @@ const Navigation = (props) => {
               <NavDropdown.Divider />
               <NavDropdown.Item
                 as={Link}
-                to="#action/3.4"
+                to="/code_samples"
                 onClick={() =>
                   setTimeout(() => {
                     setExpanded(false);
                   }, 150)
                 }
               >
-                Separated link
+                Gallery
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

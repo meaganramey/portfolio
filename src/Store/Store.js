@@ -8,9 +8,8 @@ const useStore = create(
         set({ background: "aboutMe" });
       } else if (location === "resume") {
         set({ background: "resume" });
-      }
-      else {
-        set({background: "home"})
+      } else {
+        set({ background: "home" });
       }
     },
     background: "",

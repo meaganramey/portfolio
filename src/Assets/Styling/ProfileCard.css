@@ -1,0 +1,9 @@
+.img-fluid {
+  margin: 5px;
+  padding: 2px;
+}
+#experience_in {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

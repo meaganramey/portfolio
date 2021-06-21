@@ -8,19 +8,19 @@ import Col from "react-bootstrap/Col";
 const AboutMe = (props) => {
   return (
     <>
-      <Container>
+      <Container className="mt-5 mb-5">
         <Row>
           <Col
-            xs={{ span: 6, order: "last" }}
-            md={4}
+            xs={{ span: 12, order: "last" }}
+            md={{ span: 4, order: "first", offset: 0 }}
             lg={{ span: 4, order: "first" }}
           >
             <ProfileCard />
           </Col>
           <Col
             xs={{ span: 12, order: "first" }}
-            md={8}
-            lg={{ span: 8, order: "last" }}
+            md={{ span: 7, order: "last", offset: 1 }}
+            lg={{ span: 7, order: "last" }}
           >
             <Letter />
           </Col>
