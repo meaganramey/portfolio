@@ -1,13 +1,12 @@
 import React from "react";
 import Typed from "react-typed";
+import { Link } from "react-router-dom";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/Row";
 import Jumbotron from "react-bootstrap/Jumbotron";
-import Nav from "react-bootstrap/Nav";
-import { Link } from "react-router-dom";
+import Button from "react-bootstrap/esm/Button";
 
 import "../Assets/Styling/LandingPage.css";
-import Button from "react-bootstrap/esm/Button";
 
 const LandingPage = (props) => {
   return (
