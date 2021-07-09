@@ -1,0 +1,36 @@
+@media only screen and (max-width: 767px) {
+  #img-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20%;
+  }
+  img#hover-zoom:hover {
+    /* transform: scale(1.25); */
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.8) translate(0, 0) !important;
+    z-index: 99;
+  }
+}
+
+#img-wrapper {
+  display: flex;
+  margin-bottom: 20%;
+}
+img#hover-zoom:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.8) translate(-20%, -20%);
+}
+#hover-zoom {
+  width: 200px;
+  transition: transform 0.2s; /* Animation */
+  width: 200px;
+  margin: 10% auto 0;
+  position: relative;
+  transform: translate(0, 0);
+}

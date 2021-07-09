@@ -2,6 +2,8 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 
 import FECert from "../Assets/Images/FrontEndCertificate.png";
+import FullStackCert from "../Assets/Images/FullStackCertificate.png";
+import "../Assets/Styling/Letter.css";
 
 const Letter = (props) => {
   return (
@@ -58,24 +60,26 @@ const Letter = (props) => {
           Meagan S. Ramey
         </Card.Text>
       </Card.Body>
+      <div id='img-wrapper'>
       <img
         src={FECert}
         alt="Salesforce Certification"
         className="img-fluid"
-        style={{ width: 200 }}
+        id='hover-zoom'
       />
       <img
-        src={FECert}
+        src={FullStackCert}
         alt="Kenzie Certification"
         className="img-fluid"
-        style={{ width: 200 }}
+        id='hover-zoom'
       />
-      <img
+      {/* <img
         src={FECert}
         alt="Free Code Camp Certification"
         className="img-fluid"
         style={{ width: 200 }}
-      />
+      /> */}
+      </div>
     </>
   );
 };

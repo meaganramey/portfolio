@@ -1,3 +1,11 @@
+@media only screen and (max-width: 767px) {
+  #profileCard {
+    margin-bottom: 40%;
+  }
+}
+
+
+
 .img-fluid {
   margin: 5px;
   padding: 2px;

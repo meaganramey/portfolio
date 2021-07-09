@@ -23,7 +23,7 @@ import "../Assets/Styling/ProfileCard.css";
 const ProfileCard = (props) => {
   return (
     <>
-      <Card style={{ minWidth: "18rem", maxWidth: "400px" }} text="secondary">
+      <Card id='profileCard' style={{ minWidth: "18rem", maxWidth: "400px" }} text="secondary">
         <Card.Img variant="top" src={Avatar} alt="Meagan standing in a field" />
         <Card.Body>
           <Card.Title className="text-dark mb-3 font-weight-heavy">
