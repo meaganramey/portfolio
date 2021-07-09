@@ -1,24 +1,37 @@
 import React from "react";
-import resume from "./Images/Resume.jpg";
-import pdf from "./Images/pdfResume.pdf";
-import "./resume.css";
+import Button from "react-bootstrap/Button";
 
-function Resume(props) {
+import resumeP1 from "../Assets/Images/ResumeP1.png";
+import resumeP2 from "../Assets/Images/ResumeP2.png";
+import pdf from "../Assets/Images/Resume.pdf";
+import "../Assets/Styling/Resume.css";
+
+const Resume = (props) => {
   return (
     <>
       <div className="Main">
-        <div className="pdf">
-          <a href={pdf}>Click here for a PDF of my resume</a>
-        </div>
+        <p className="pt-3">
+          <Button href={pdf} download variant="secondary">
+            Click here for a PDF of my resume.
+          </Button>
+        </p>
+        <p className="pb-5 Main" >
         <img
-          className="Resume"
+          id="resume-zoom"
           style={{ width: "50%" }}
-          src={resume}
-          alt="Resume"
+          src={resumeP1}
+          alt="Resume Page 1 of 2"
+        />{" "}
+        <img
+          id="resume-zoom"
+          style={{ width: "50%" }}
+          src={resumeP2}
+          alt="Resume Page 2 of 2"
         />
+        </p>
       </div>
     </>
   );
-}
+};
 
 export default Resume;

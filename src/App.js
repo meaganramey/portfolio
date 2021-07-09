@@ -5,6 +5,7 @@ import Navigation from "./Views/Navigation";
 import AboutMe from "./Views/AboutMe";
 import LandingPage from "./Views/LandingPage";
 import Footer from "./Components/Footer";
+import Resume from "./Views/Resume";
 
 import "./Assets/Styling/App.css";
 import useStore from "./Store/Store";
@@ -22,8 +23,9 @@ function App() {
       <div id={background} className="bg-image">
         <Navigation />
         <Switch>
+          <Route path="/resume" component={Resume} />
           <Route path="/about_meagan" component={AboutMe} />
-          <Route path="/" component={LandingPage} />
+          <Route exact path="/" component={LandingPage} />
         </Switch>
       </div>
       <Footer />
