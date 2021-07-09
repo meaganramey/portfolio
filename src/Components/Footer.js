@@ -131,9 +131,9 @@ const Footer = (props) => {
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/code_samples"
+              to="/gallery"
               className="text-white"
-              onClick={(e) => updateBackground("code_samples")}
+              onClick={(e) => updateBackground("gallery")}
             >
               Code Samples
             </Nav.Link>

@@ -41,10 +41,10 @@ const LandingPage = (props) => {
             <p className="pt-3">
               <Button
                 as={Link}
-                to="/code_samples"
+                to="/gallery"
                 variant="secondary"
                 block
-                onClick={(e) => updateBackground("code_samples")}
+                onClick={(e) => updateBackground("gallery")}
               >
                 View my work
               </Button>

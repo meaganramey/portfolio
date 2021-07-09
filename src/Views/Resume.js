@@ -15,19 +15,19 @@ const Resume = (props) => {
             Click here for a PDF of my resume.
           </Button>
         </p>
-        <p className="pb-5 Main" >
-        <img
-          id="resume-zoom"
-          style={{ width: "50%" }}
-          src={resumeP1}
-          alt="Resume Page 1 of 2"
-        />{" "}
-        <img
-          id="resume-zoom"
-          style={{ width: "50%" }}
-          src={resumeP2}
-          alt="Resume Page 2 of 2"
-        />
+        <p className="pb-5 Main">
+          <img
+            id="resume-zoom"
+            style={{ width: "50%" }}
+            src={resumeP1}
+            alt="Resume Page 1 of 2"
+          />{" "}
+          <img
+            id="resume-zoom"
+            style={{ width: "50%" }}
+            src={resumeP2}
+            alt="Resume Page 2 of 2"
+          />
         </p>
       </div>
     </>

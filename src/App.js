@@ -6,6 +6,7 @@ import AboutMe from "./Views/AboutMe";
 import LandingPage from "./Views/LandingPage";
 import Footer from "./Components/Footer";
 import Resume from "./Views/Resume";
+import Gallery from "./Views/Gallery";
 
 import "./Assets/Styling/App.css";
 import useStore from "./Store/Store";
@@ -23,6 +24,7 @@ function App() {
       <div id={background} className="bg-image">
         <Navigation />
         <Switch>
+          <Route path="/gallery" component={Gallery} />
           <Route path="/resume" component={Resume} />
           <Route path="/about_meagan" component={AboutMe} />
           <Route exact path="/" component={LandingPage} />

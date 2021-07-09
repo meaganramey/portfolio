@@ -98,7 +98,7 @@ const Navigation = (props) => {
               <NavDropdown.Divider />
               <NavDropdown.Item
                 as={Link}
-                to="/code_samples"
+                to="/gallery"
                 onClick={() =>
                   setTimeout(() => {
                     setExpanded(false);

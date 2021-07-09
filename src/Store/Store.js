@@ -8,7 +8,10 @@ const useStore = create(
         set({ background: "aboutMe" });
       } else if (location === "resume") {
         set({ background: "resume" });
-      } else {
+      } else if (location === 'gallery') {
+        set({ background: "gallery" })
+      }
+      else {
         set({ background: "home" });
       }
     },
