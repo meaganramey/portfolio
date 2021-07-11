@@ -7,6 +7,15 @@
   #aboutMe {
     background-image: url("../Images/background_areial_beach.jpg");
   }
+  #resume {
+    background-image: url("../Images/background_chalet_among_flowers.jpg");
+  }
+  #gallery {
+    background-image: url("../Images/background_foggy_mountain.jpg");
+  }
+  #missing {
+    background-image: url("../Images/background_silhouette_of_mountain.jpg");
+  }
 }
 
 .bg-image {
@@ -39,6 +48,6 @@
 /* #resume {
   background-image: url("../Images/background_photo_of_valley.jpg");
 } */
-/* #resume {
+#missing {
   background-image: url("../Images/background_silhouette_of_mountain.jpg");
-} */
+}
