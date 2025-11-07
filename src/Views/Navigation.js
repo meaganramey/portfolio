@@ -1,115 +1,82 @@
 import React, { useState } from "react";
-import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 
 import useStore from "../Store/Store";
 
-const Navigation = (props) => {
+const Navigation = () => {
   const [expanded, setExpanded] = useState(false);
   const updateBackground = useStore((state) => state.updateBackground);
   return (
     <>
       <Navbar bg="dark" variant="dark" expand="lg" expanded={expanded}>
-        <Navbar.Brand
-          as={Link}
-          to="/"
-          onClick={(e) => updateBackground("home")}
-        >
-          Meagan Ramey
-        </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          onClick={() => setExpanded(expanded ? false : "expanded")}
-        />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link
-              as={Link}
-              to="/"
-              onClick={() => {
-                setTimeout(() => {
-                  setExpanded(false);
-                }, 150);
-                updateBackground("home");
-              }}
-            >
-              Home
-            </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to="/about_meagan"
-              onClick={() => {
-                setTimeout(() => {
-                  setExpanded(false);
-                }, 150);
-                updateBackground("aboutMe");
-              }}
-            >
-              About Me
-            </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to="/resume"
-              onClick={() => {
-                setTimeout(() => {
-                  setExpanded(false);
-                }, 150);
-                updateBackground("resume");
-              }}
-            >
-              Resume
-            </Nav.Link>
-            <NavDropdown title="Code Samples" id="basic-nav-dropdown">
-              <NavDropdown.Item
+        <Container>
+          <Navbar.Brand
+            as={Link}
+            to="/"
+            onClick={() => updateBackground("home")}
+          >
+            Meagan Ramey
+          </Navbar.Brand>
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            onClick={() => setExpanded(expanded ? false : "expanded")}
+          />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link
                 as={Link}
-                to="#action/3.1"
-                onClick={() =>
+                to="/"
+                onClick={() => {
                   setTimeout(() => {
                     setExpanded(false);
-                  }, 150)
-                }
+                  }, 150);
+                  updateBackground("home");
+                }}
               >
-                Action
-              </NavDropdown.Item>
-              <NavDropdown.Item
+                Home
+              </Nav.Link>
+              <Nav.Link
                 as={Link}
-                to="#action/3.2"
-                onClick={() =>
+                to="/about_meagan"
+                onClick={() => {
                   setTimeout(() => {
                     setExpanded(false);
-                  }, 150)
-                }
+                  }, 150);
+                  updateBackground("aboutMe");
+                }}
               >
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item
+                About Me
+              </Nav.Link>
+              <Nav.Link
                 as={Link}
-                to="#action/3.3"
-                onClick={() =>
+                to="/projects"
+                onClick={() => {
                   setTimeout(() => {
                     setExpanded(false);
-                  }, 150)
-                }
+                  }, 150);
+                  updateBackground("projects");
+                }}
               >
-                Something
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item
+                Projects
+              </Nav.Link>
+              <Nav.Link
                 as={Link}
-                to="/gallery"
-                onClick={() =>
+                to="/resume"
+                onClick={() => {
                   setTimeout(() => {
                     setExpanded(false);
-                  }, 150)
-                }
+                  }, 150);
+                  updateBackground("resume");
+                }}
               >
-                Gallery
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
+                Resume
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
       </Navbar>
     </>
   );

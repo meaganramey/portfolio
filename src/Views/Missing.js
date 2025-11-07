@@ -1,26 +1,22 @@
 import React, { useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Jumbotron from "react-bootstrap/Jumbotron";
 
 import useStore from "../Store/Store";
 
-const Missing = (props) => {
+const Missing = () => {
   const updateBackground = useStore((state) => state.updateBackground);
   useEffect(() => {
     updateBackground("missing");
-  }, []);
+  }, [updateBackground]);
 
   return (
     <>
       <Container className="mt-5 mb-5">
         <Row className="justify-content-center">
-          <Jumbotron className="p-4 hello_jumbo">
-          <h3>
-
-            The page you requested could not be found.
-          </h3>
-          </Jumbotron>
+          <div className="p-5 hello_jumbo rounded bg-white">
+            <h3>The page you requested could not be found.</h3>
+          </div>
         </Row>
       </Container>
     </>
