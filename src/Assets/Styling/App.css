@@ -10,7 +10,7 @@
   #resume {
     background-image: url("../Images/background_chalet_among_flowers.jpg");
   }
-  #gallery {
+  #projects {
     background-image: url("../Images/background_foggy_mountain.jpg");
   }
   #missing {
@@ -39,15 +39,9 @@
 #resume {
   background-image: url("../Images/background_chalet_among_flowers.jpg");
 }
-#gallery {
+#projects {
   background-image: url("../Images/background_foggy_mountain.jpg");
 }
-/* #resume {
-  background-image: url("../Images/background_photo_of_two_mountains.jpg");
-} */
-/* #resume {
-  background-image: url("../Images/background_photo_of_valley.jpg");
-} */
 #missing {
   background-image: url("../Images/background_silhouette_of_mountain.jpg");
 }

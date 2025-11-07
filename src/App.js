@@ -1,51 +1,58 @@
-import React, { useEffect } from "react";
-import { Route, Switch, useHistory } from "react-router";
+import "./Assets/Styling/App.css";
 
-import Navigation from "./Views/Navigation";
+import React, { useEffect } from "react";
+import { HashRouter, Route, Routes, useLocation } from "react-router-dom";
+
+import Footer from "./Components/Footer";
+import useStore from "./Store/Store";
 import AboutMe from "./Views/AboutMe";
 import LandingPage from "./Views/LandingPage";
-import Footer from "./Components/Footer";
-import Resume from "./Views/Resume";
-import Gallery from "./Views/Gallery";
 import Missing from "./Views/Missing";
+import Navigation from "./Views/Navigation";
+import Projects from "./Views/Projects";
+import Resume from "./Views/Resume";
 
-import "./Assets/Styling/App.css";
-import useStore from "./Store/Store";
-
-function App() {
+function AppContent() {
   const background = useStore((state) => state.background);
   const updateBackground = useStore((state) => state.updateBackground);
-  const history = useHistory()
-  console.log(history)
-  console.log('hello')
+  const location = useLocation();
+
   useEffect(() => {
-    if (history.location.pathname === '/') {
+    if (location.pathname === "/") {
       updateBackground("home");
-    }
-    else if (history.location.pathname === '/about_meagan') {
+    } else if (location.pathname === "/about_meagan") {
       updateBackground("aboutMe");
-    }
-    else if (history.location.pathname === '/resume') {
+    } else if (location.pathname === "/resume") {
       updateBackground("resume");
+    } else if (location.pathname === "/projects") {
+      updateBackground("projects");
     }
-    else if (history.location.pathname === '/gallery') {
-      updateBackground("gallery");
-    }
-  }, [background]);
+  }, [location, updateBackground]);
+
   return (
     <>
       <div id={background} className="bg-image">
         <Navigation />
-        <Switch>
-          <Route path="/gallery" component={Gallery} />
-          <Route path="/resume" component={Resume} />
-          <Route path="/about_meagan" component={AboutMe} />
-          <Route exact path="/" component={LandingPage} />
-          <Route path="*" component={Missing} />
-        </Switch>
+        <main id="main-content">
+          <Routes>
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/about_meagan" element={<AboutMe />} />
+            <Route path="/" element={<LandingPage />} />
+            <Route path="*" element={<Missing />} />
+          </Routes>
+        </main>
       </div>
       <Footer />
     </>
+  );
+}
+
+function App() {
+  return (
+    <HashRouter>
+      <AppContent />
+    </HashRouter>
   );
 }
 

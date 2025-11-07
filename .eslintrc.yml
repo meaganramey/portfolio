@@ -1,0 +1,28 @@
+env:
+  browser: true
+  node: true
+  es2021: true
+extends:
+  - "eslint:recommended"
+  - "plugin:react/recommended"
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 12
+  sourceType: module
+plugins:
+  - react
+  - simple-import-sort
+ignorePatterns:
+  - src/Tests/*
+rules: {
+    "simple-import-sort/imports": "error",
+    # {
+    #   "ignoreCase": false,
+    #   # "ignoreDeclarationSort": false,
+    #   # "ignoreMemberSort": false,
+    #   # "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+    #   # "allowSeparatedGroups": false,
+    # },
+    "simple-import-sort/exports": "error",
+  }

@@ -1,11 +1,12 @@
 import React from "react";
-import Letter from "../Components/Letter";
-import ProfileCard from "../Components/ProfileCard";
+import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
-const AboutMe = (props) => {
+import Letter from "../Components/Letter";
+import ProfileCard from "../Components/ProfileCard";
+
+const AboutMe = () => {
   return (
     <>
       <Container className="mt-5 mb-5">
