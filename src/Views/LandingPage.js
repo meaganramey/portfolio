@@ -1,35 +1,37 @@
-import React from "react";
-import Typed from "react-typed";
-import { Link } from "react-router-dom";
-import Container from "react-bootstrap/esm/Container";
-import Row from "react-bootstrap/Row";
-import Jumbotron from "react-bootstrap/Jumbotron";
-import Button from "react-bootstrap/esm/Button";
-
 import "../Assets/Styling/LandingPage.css";
+
+import React from "react";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import { Link } from "react-router-dom";
+import { ReactTyped } from "react-typed";
+
 import useStore from "../Store/Store";
 
-const LandingPage = (props) => {
+const LandingPage = () => {
   const updateBackground = useStore((state) => state.updateBackground);
   return (
     <>
       <Container className="mt-5 mb-5">
         <Row className="justify-content-center hello_row">
-          <Jumbotron className="p-4 text-white hello_jumbo">
+          <div className="p-5 text-white hello_jumbo rounded">
             <h1 className="intro-title mb-4">Meagan Ramey</h1>
             <h4 className="intro-subtitle">
               <span className="text-slider-items"></span>
               <strong className="text-slider">
-                <Typed
+                <ReactTyped
                   strings={[
-                    "Front End Developer",
-                    "Cat Mom",
-                    "Back End Developer",
-                    "Biologist",
-                    "React Developer",
-                    "Contra Dancer",
-                    "Software Engineer",
-                    "Lover of Life",
+                    "Software Development Engineer",
+                    "React/TypeScript Specialist",
+                    "Kafka Performance Expert",
+                    "Technical Writer & Architect",
+                    "Full-Stack Developer",
+                    "Microservices Specialist",
+                    "Python & C# Developer",
+                    "System Optimizer",
+                    "Problem Solver",
+                    "Lifelong Learner",
                   ]}
                   typeSpeed={80}
                   backDelay={1100}
@@ -41,15 +43,15 @@ const LandingPage = (props) => {
             <p className="pt-3">
               <Button
                 as={Link}
-                to="/gallery"
-                variant="secondary"
-                block
-                onClick={(e) => updateBackground("gallery")}
+                to="/about_meagan"
+                variant="light"
+                size="lg"
+                onClick={() => updateBackground("aboutMe")}
               >
-                View my work
+                Learn About Me
               </Button>
             </p>
-          </Jumbotron>
+          </div>
         </Row>
       </Container>
     </>

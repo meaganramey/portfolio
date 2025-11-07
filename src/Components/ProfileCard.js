@@ -1,169 +1,229 @@
+import "../Assets/Styling/ProfileCard.css";
+
 import React from "react";
 import Card from "react-bootstrap/Card";
 
 import Avatar from "../Assets/Images/avatar.jpg";
+import AWS from "../Assets/Images/aws-svgrepo-com.svg";
 import Bootstrapimg from "../Assets/Images/bootstrap-icon.png";
 import CSSimg from "../Assets/Images/css-icon.png";
 import Django from "../Assets/Images/django-icon.png";
-import Firebase from "../Assets/Images/firebase-icon.webp";
+import Docker from "../Assets/Images/docker-svgrepo-com.svg";
 import Gitimg from "../Assets/Images/git-icon.png";
 import Githubimg from "../Assets/Images/github-icon.png";
-import Gitlabimg from "../Assets/Images/gitlab-icon.png";
 import HTMLimg from "../Assets/Images/html-icon.png";
 import JSimg from "../Assets/Images/javascript-icon.png";
-import Mongo from "../Assets/Images/mongodb-icon1.png";
+import Kafka from "../Assets/Images/kafka-svgrepo-com.svg";
 import Nodeimg from "../Assets/Images/nodejs-icon.png";
+import PostgreSQL from "../Assets/Images/postgresql-svgrepo-com.svg";
 import Python from "../Assets/Images/python-icon.png";
 import Reactimg from "../Assets/Images/react-icon.png";
-import Redux from "../Assets/Images/redux-icon.png";
-import Slack from "../Assets/Images/slack-icon.png";
+import TypeScript from "../Assets/Images/typescript-official-svgrepo-com.svg";
 import VS from "../Assets/Images/vscode-icon.png";
-import "../Assets/Styling/ProfileCard.css";
 
-const ProfileCard = (props) => {
+const ProfileCard = () => {
   return (
     <>
-      <Card id='profileCard' style={{ minWidth: "18rem", maxWidth: "400px" }} text="secondary">
+      <Card
+        id="profileCard"
+        style={{ minWidth: "18rem", maxWidth: "400px" }}
+        text="secondary"
+      >
         <Card.Img variant="top" src={Avatar} alt="Meagan standing in a field" />
         <Card.Body>
-          <Card.Title className="text-dark mb-3 font-weight-heavy">
+          <Card.Title className="text-dark mb-3 fw-bold">
             Meagan Ramey
           </Card.Title>
           <Card.Subtitle
-            className="text-secondary mb-3 font-weight-light text-uppercase"
+            className="text-secondary mb-3 fw-light text-uppercase"
             style={{ fontSize: "0.9rem" }}
           >
-            Full Stack Developer
+            Software Development Engineer
           </Card.Subtitle>
           <Card.Text
-            className="text-secondary mb-4 font-weight-normal"
+            className="text-secondary mb-4 fw-normal"
             style={{ fontSize: "0.95rem" }}
           >
-            Biology, coding, sociology, and Skyrim are my passions.
+            Building resilient distributed systems and intuitive user
+            interfaces. Passionate about Kafka optimization, React/TypeScript
+            development, technical architecture, and performance analysis. Also
+            love biology, contra dancing, and anthropology.
           </Card.Text>
           <Card.Text
             className="text-secondary mb-4"
             style={{ fontSize: "0.95rem" }}
           >
-            meagan.ramey@yahoo.com
-            <br />
-            608-208-6758
-            <br />
-            GitHub:{" "}
-            <a
-              href="https://github.com/meaganramey"
-              target="_blank"
-              rel="noreferrer"
-            >
-              meaganramey
-              <br />
-            </a>
-            LinkdedIn:{" "}
-            <a
-              href="https://www.linkedin.com/in/meagan-ramey/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Meagan Ramey
-            </a>
+            <div className="mb-2">
+              <i className="bi bi-envelope-fill me-2"></i>
+              <a
+                href="mailto:meagan.ramey@yahoo.com"
+                className="text-decoration-none"
+              >
+                meagan.ramey@yahoo.com
+              </a>
+            </div>
+            <div className="mb-2">
+              <i className="bi bi-telephone-fill me-2"></i>
+              608-208-6758
+            </div>
+            <div className="mb-2">
+              <i className="bi bi-github me-2"></i>GitHub:{" "}
+              <a
+                href="https://github.com/meaganramey"
+                target="_blank"
+                rel="noreferrer"
+                className="text-decoration-none"
+              >
+                meaganramey
+              </a>
+            </div>
+            <div className="mb-2">
+              <i className="bi bi-linkedin me-2"></i>LinkedIn:{" "}
+              <a
+                href="https://www.linkedin.com/in/meagan-ramey/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-decoration-none"
+              >
+                Meagan Ramey
+              </a>
+            </div>
           </Card.Text>
-          <div id="experience_in">
+          <Card.Subtitle
+            className="text-dark mb-3 fw-semibold"
+            style={{ fontSize: "0.9rem" }}
+          >
+            Tech Stack
+          </Card.Subtitle>
+          <div
+            id="experience_in"
+            className="d-flex flex-wrap gap-2 justify-content-center"
+          >
             <img
-              src={HTMLimg}
-              alt="HTML Icon"
+              src={Reactimg}
+              alt="React"
               className="img-fluid"
               style={{ width: 36 }}
+              title="React"
+            />
+            <img
+              src={TypeScript}
+              alt="TypeScript"
+              className="img-fluid"
+              style={{ width: 36 }}
+              title="TypeScript"
             />
             <img
               src={JSimg}
-              alt="JS Icon"
+              alt="JavaScript"
               className="img-fluid"
               style={{ width: 34 }}
-            />
-            <img
-              src={CSSimg}
-              alt="CSS Icon"
-              className="img-fluid"
-              style={{ width: 36 }}
-            />
-            <img
-              src={Reactimg}
-              alt="React Icon"
-              className="img-fluid"
-              style={{ width: 42 }}
-            />
-            <img
-              src={Redux}
-              alt="Redux Icon"
-              className="img-fluid"
-              style={{ width: 34 }}
+              title="JavaScript"
             />
             <img
               src={Python}
-              alt="Python Icon"
+              alt="Python"
               className="img-fluid"
               style={{ width: 36 }}
-            />
-            <img
-              src={Mongo}
-              alt="Mongo Icon"
-              className="img-fluid"
-              style={{ width: 40 }}
-            />
-            <img
-              src={Django}
-              alt="Django Icon"
-              className="img-fluid"
-              style={{ width: 34 }}
+              title="Python"
             />
             <img
               src={Nodeimg}
-              alt="NodeJS Icon"
+              alt="Node.js"
               className="img-fluid"
               style={{ width: 36 }}
+              title="Node.js"
+            />
+            <img
+              src={Django}
+              alt="Django"
+              className="img-fluid"
+              style={{ width: 34 }}
+              title="Django"
+            />
+            <img
+              src={Kafka}
+              alt="Kafka"
+              className="img-fluid"
+              style={{ width: 36 }}
+              title="Kafka"
+            />
+            <img
+              src={Docker}
+              alt="Docker"
+              className="img-fluid"
+              style={{ width: 36 }}
+              title="Docker"
+            />
+            <img
+              src={AWS}
+              alt="AWS"
+              className="img-fluid"
+              style={{ width: 36 }}
+              title="AWS"
+            />
+            <img
+              src={PostgreSQL}
+              alt="PostgreSQL"
+              className="img-fluid"
+              style={{ width: 36 }}
+              title="PostgreSQL"
+            />
+            <img
+              src={HTMLimg}
+              alt="HTML"
+              className="img-fluid"
+              style={{ width: 36 }}
+              title="HTML"
+            />
+            <img
+              src={CSSimg}
+              alt="CSS"
+              className="img-fluid"
+              style={{ width: 36 }}
+              title="CSS"
             />
             <img
               src={Bootstrapimg}
-              alt="Bootstrap Icon"
+              alt="Bootstrap"
               className="img-fluid"
               style={{ width: 32 }}
-            />
-            <img
-              src={Gitlabimg}
-              alt="Gitlab Icon"
-              className="img-fluid"
-              style={{ width: 36 }}
+              title="Bootstrap"
             />
             <img
               src={Githubimg}
-              alt="Github Icon"
+              alt="GitHub"
               className="img-fluid"
               style={{ width: 36 }}
+              title="GitHub"
             />
             <img
               src={Gitimg}
-              alt="Git Icon"
+              alt="Git"
               className="img-fluid"
               style={{ width: 36 }}
-            />
-            <img
-              src={Firebase}
-              alt="Firebase Icon"
-              className="img-fluid"
-              style={{ width: 36 }}
-            />
-            <img
-              src={Slack}
-              alt="Slack Icon"
-              className="img-fluid"
-              style={{ width: 36 }}
+              title="Git"
             />
             <img
               src={VS}
-              alt="VScode Icon"
+              alt="VS Code"
               className="img-fluid"
               style={{ width: 32 }}
+              title="VS Code"
             />
+          </div>
+          <div className="mt-3 text-center">
+            <small className="text-muted d-block mb-1">
+              <strong>Backend:</strong> TypeScript • C# • Kafka • Microservices
+            </small>
+            <small className="text-muted d-block mb-1">
+              <strong>Infrastructure:</strong> AWS (S3, SES) • Docker • Heroku •
+              PostgreSQL
+            </small>
+            <small className="text-muted d-block">
+              <strong>Specialty:</strong> Performance Analysis • Technical
+              Writing • System Architecture
+            </small>
           </div>
         </Card.Body>
       </Card>
