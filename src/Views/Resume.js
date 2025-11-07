@@ -1,35 +1,43 @@
-import React from "react";
-import Button from "react-bootstrap/Button";
-
-import resumeP1 from "../Assets/Images/ResumeP1.png";
-import resumeP2 from "../Assets/Images/ResumeP2.png";
-import pdf from "../Assets/Images/Resume.pdf";
 import "../Assets/Styling/Resume.css";
 
-const Resume = (props) => {
+import React from "react";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+
+import pdf from "../Assets/Images/Ramey Resume.pdf";
+import resumeP1 from "../Assets/Images/ResumeP1.png";
+import resumeP2 from "../Assets/Images/ResumeP2.png";
+
+const Resume = () => {
   return (
     <>
-      <div className="Main">
-        <p className="pt-3">
-          <Button href={pdf} download variant="secondary">
-            Click here for a PDF of my resume.
+      <Container className="resume-container text-center">
+        <div className="resume-header py-4">
+          <h2 className="text-white mb-3">Resume</h2>
+          <Button
+            href={pdf}
+            download="Meagan_Ramey_Resume.pdf"
+            variant="light"
+            size="lg"
+          >
+            <i className="bi bi-download me-2"></i>
+            Download PDF
           </Button>
-        </p>
-        <p className="pb-5 Main">
+        </div>
+
+        <div className="resume-images">
           <img
-            id="resume-zoom"
-            style={{ width: "50%" }}
             src={resumeP1}
-            alt="Resume Page 1 of 2"
-          />{" "}
-          <img
-            id="resume-zoom"
-            style={{ width: "50%" }}
-            src={resumeP2}
-            alt="Resume Page 2 of 2"
+            alt="Resume Page 1"
+            className="resume-image img-fluid mb-3"
           />
-        </p>
-      </div>
+          <img
+            src={resumeP2}
+            alt="Resume Page 2"
+            className="resume-image img-fluid"
+          />
+        </div>
+      </Container>
     </>
   );
 };

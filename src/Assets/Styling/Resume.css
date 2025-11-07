@@ -1,21 +1,32 @@
-.Main { 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.resume-container {
+  max-width: 900px;
+  padding: 2rem 1rem;
 }
- 
-  img#resume-zoom:hover {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.5) translate(0, 10%);
-    z-index: 99;
-    margin-bottom: 25%;
+
+.resume-header {
+  margin-bottom: 2rem;
+}
+
+.resume-images {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resume-image {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .resume-container {
+    padding: 1rem 0.5rem;
   }
-  #resume-zoom {
-    transition: transform 0.2s; /* Animation */
-    position: relative;
-    transform: translate(0, 0);
+
+  .resume-images {
+    padding: 1rem;
   }
-  
+}
