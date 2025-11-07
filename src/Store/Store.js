@@ -8,8 +8,8 @@ const useStore = create(
         set({ background: "aboutMe" });
       } else if (location === "resume") {
         set({ background: "resume" });
-      } else if (location === "gallery") {
-        set({ background: "gallery" });
+      } else if (location === "projects") {
+        set({ background: "projects" });
       } else if (location === "missing") {
         set({ background: "missing" });
       } else {
@@ -17,7 +17,7 @@ const useStore = create(
       }
     },
     background: "",
-  }))
+  })),
 );
 
 export default useStore;
